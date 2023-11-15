@@ -15,7 +15,7 @@
             &nbsp
             <%= link_to "Edit this flat", edit_flat_path(flat), style: "color: goldenrod" %>
             &nbsp
-            <%= link_to "Back to flats", flats_path, style: "color: red" %>
+            <%= link_to "Remove", flat, data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this flat?" }, style: "color: red" %>
           </p>
         </div>
       </div>

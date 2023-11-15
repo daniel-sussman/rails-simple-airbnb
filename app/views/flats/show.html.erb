@@ -3,9 +3,8 @@
 <div class="map-container">
 
 </div>
-<img src="app/assets/images/staticmap.png" alt="">
 
-<div class="container margin-top-negative">
+<div class="container mt-3">
   <div class="row">
     <div class="col-8">
       <div class="card p-3 mb-3 shadow-sm bg-light">
@@ -22,6 +21,9 @@
           <%= @flat.description %>
         </p>
       </div>
+        <div class="my-3">
+          <img src="<%= asset_path("staticmap.png") %>" alt="map">
+        </div>
     </div>
 
     <div class="col-4">
@@ -67,6 +69,5 @@
 </div>
 
 <div>
-  <%= link_to "Edit this flat", edit_flat_path(@flat) %> |
-  <%= link_to "Destroy this flat", @flat, method: :delete %>
+  <%= link_to "Edit this flat", edit_flat_path(@flat) %>
 </div>
