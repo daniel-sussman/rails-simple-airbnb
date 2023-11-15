@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+a {
+  color: rgb(0, 110, 255);
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+nav a {
+  color: black;
+}
+
+.map-container {
+  margin: 0;
+  width: 100vw;
+  height: 40vh;
+  background-color: brown;
+}
+
+.card-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+div p {
+  margin-bottom: 1rem !important;
+}
+
+.center-align {
+  height: 3rem;
+  line-height: 2.5rem;
+}

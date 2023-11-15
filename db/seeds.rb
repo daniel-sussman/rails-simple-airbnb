@@ -7,3 +7,16 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require 'faker'
+
+puts "Emptying the database..."
+
+Flat.destroy_all
+
+puts "Generating some flats..."
+
+10.times do
+  Flat.create(name: "#{Faker::Emotion.adjective.capitalize} flat near #{Faker::Travel::TrainStation.name(region: 'spain')}", address: Faker::Address.full_address, description: Faker::ChuckNorris.fact, price_per_night: rand(50..350), number_of_guests: rand(1..6))
+end
+
+puts "Generation complete!"

@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="flats" class="container mt-3">
+  <h1>All our flats</h1>
+  <p>Showing all <%= @flats.size %> flats</p>
+  <div class="card-grid">
+    <% @flats.each do |flat| %>
+      <div class="card shadow-sm bg-white">
+        <div class="card-body bg-light">
+            <%= render flat %>
+        </div>
+        <div class="px-3 py-1 center-align">
+          <p>
+            <%= link_to "More info", flat %>
+            &nbsp
+            <%= link_to "Edit this flat", edit_flat_path(flat), style: "color: goldenrod" %>
+            &nbsp
+            <%= link_to "Back to flats", flats_path, style: "color: red" %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
